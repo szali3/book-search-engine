@@ -1,12 +1,3 @@
-/*
-mutations.js:
-
-LOGIN_USER will execute the loginUser mutation set up using Apollo Server.
-ADD_USER will execute the addUser mutation.
-SAVE_BOOK will execute the saveBook mutation.
-REMOVE_BOOK will execute the removeBook mutation.
-*/
-
 import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
@@ -16,16 +7,6 @@ export const LOGIN_USER = gql`
       user {
         _id
         username
-        email
-        bookCount
-        savedBooks {
-          authors
-          description
-          title
-          bookId
-          image
-          link
-        }
       }
     }
   }
@@ -38,16 +19,6 @@ export const ADD_USER = gql`
         user {
           _id
           username
-          email
-          bookCount
-          savedBooks {
-            authors
-            description
-            title
-            bookId
-            image
-            link
-          }
         }
       }
     }
@@ -61,15 +32,15 @@ export const SAVE_BOOK = gql`
       email
       bookCount
       savedBooks {
-        bookId
         authors
         description
         title
+        bookId
         image
         link
+      }
     }
   }
-}
 `;
 
 export const REMOVE_BOOK = gql`
@@ -86,7 +57,7 @@ export const REMOVE_BOOK = gql`
         bookId
         image
         link
-      }
+      } 
     }
   }
 `;
