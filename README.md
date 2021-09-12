@@ -1,4 +1,4 @@
-# Book Search Engine Starter Code
+# Book Search Engine
 
 ![Screenshot](book-search.png)
 
